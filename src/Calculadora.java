@@ -5,16 +5,16 @@ public class Calculadora {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Calculadora básica +, -, / ou *");
-        System.out.println("Digite o primeiro número: ");
+        System.out.print("Digite o primeiro número: ");
         double n1 = scanner.nextDouble();
 
         // consumir a quebra de linha remanescente do enter que o next.double não lê, só lê números
         scanner.nextLine();
 
-        System.out.println("Digite o operador: ");
+        System.out.print("Digite o operador: ");
         String operador = scanner.nextLine();
 
-        System.out.println("Digite o segundo número: ");
+        System.out.print("Digite o segundo número: ");
         double n2 = scanner.nextDouble();
 
         if (operador.equals("+")) {
@@ -26,7 +26,7 @@ public class Calculadora {
         } else if (operador.equals("/")) {
             if (n2 == 0.0) {
                 System.out.println("Impossível divisão por zero! Tente novamente.");
-            } else if (n2 != 0.0) {
+            } else {
                 double resultado = n1 / n2;
                 System.out.println("O resultado é: " + resultado);
             }
@@ -36,5 +36,7 @@ public class Calculadora {
         } else {
             System.out.println("Operador Inválido.");
         }
+
+        scanner.close()
     }
 }
