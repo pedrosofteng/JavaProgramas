@@ -1,15 +1,40 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Calculadora {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Calculadora básica +, -, / ou *");
+        System.out.println("Digite o primeiro número: ");
+        double n1 = scanner.nextDouble();
+
+        // consumir a quebra de linha remanescente do enter que o next.double não lê, só lê números
+        scanner.nextLine();
+
+        System.out.println("Digite o operador: ");
+        String operador = scanner.nextLine();
+
+        System.out.println("Digite o segundo número: ");
+        double n2 = scanner.nextDouble();
+
+        if (operador.equals("+")) {
+            double resultado = n1 + n2;
+            System.out.println("O resultado é: " + resultado);
+        } else if (operador.equals("-")) {
+            double resultado = n1 - n2;
+            System.out.println("O resultado é: " + resultado);
+        } else if (operador.equals("/")) {
+            if (n2 == 0.0) {
+                System.out.println("Impossível divisão por zero! Tente novamente.");
+            } else if (n2 != 0.0) {
+                double resultado = n1 / n2;
+                System.out.println("O resultado é: " + resultado);
+            }
+        } else if (operador.equals("*")) {
+            double resultado = n1 * n2;
+            System.out.println("O resultado é: " + resultado);
+        } else {
+            System.out.println("Operador Inválido.");
         }
     }
 }
