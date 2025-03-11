@@ -4,28 +4,35 @@ import java.util.Scanner;
 public class Comparação {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n1 = 0;
-        int n2 = 0;
+        double n1 = 0.0;
+        double n2 = 0.0;
 
         try {
         System.out.print("Digite o primeiro número: ");
-        n1 = scanner.nextInt();
+        n1 = (int) Math.round(scanner.nextDouble());;
 
         } catch (InputMismatchException e) {
-            System.out.println("Digite um número válido, sem casa decimais ou letras/palavras.");
+            System.out.println("Digite um número válido, sem letras/palavras.");
             // limpa o buffer de entrada
             scanner.nextLine();
+            // se não está dentro de um loop não precisa de um "continue"
         }
 
+        try {
         System.out.print("Digite o segundo número: ");
-        n2 = scanner.nextInt();
+        n2 = (int) Math.round(scanner.nextDouble());
+
+        } catch (InputMismatchException e) {
+            System.out.println("Digite um número válido, sem letras/palavras.");
+            scanner.nextLine();
+        }
         
         if (n1 == n2) {
-            System.out.printf("%d é igual a %d.", n1, n2);
+            System.out.printf("%.0f é igual a %.0f.", n1, n2);
         } else if (n1 > n2) {
-            System.out.printf("%d é maior do que %d.", n1, n2);
+            System.out.printf("%.0f é maior do que %.0f.", n1, n2);
         } else {
-            System.out.printf("%d é maior do que %d", n2, n1);
+            System.out.printf("%.0f é maior do que %.0f", n2, n1);
         }
     }
 }
