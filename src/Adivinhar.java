@@ -20,6 +20,7 @@ public class Adivinhar {
 
         while (contador <= 3) {
             try {
+                System.out.println("Número de tantivas: " + contador);
                 System.out.println("Tente advinhar o número ou escreva -1 para sair: ");
                 // não coloquei int porque já declarei essas variáveis antes
                 numero = scanner.nextInt();
@@ -52,7 +53,7 @@ public class Adivinhar {
             } else {
                 System.out.println("Você errou, tente novamente");
             }
-            
+
             // aumentar o contador + 1
             contador++;
         }
