@@ -12,21 +12,20 @@ public class Adivinhar {
         // int random -> cria uma variável random que vai armazenar o número
         int random = new Random().nextInt(100);
         int contador = 1;
-        int convertido = 0;
-        int numero = 0;
+        double numero = 0.0;
         int n1 = 0;
         int n2 = 0;
         int n3 = 0;
 
         while (contador <= 3) {
             try {
-                System.out.println("Número de tantivas: " + contador);
+                System.out.println("Tentativa número: " + contador);
                 System.out.println("Tente advinhar o número ou escreva -1 para sair: ");
-                // não coloquei int porque já declarei essas variáveis antes
-                numero = scanner.nextInt();
-                // converti o número caso coloque número decimal
+                // Math.round -> converti o número caso coloque número decimal
                 // 9.2 vira 9, 9.8 vira 10
-                convertido = (int) Math.round(numero);
+                // coloquei o scanner dentro do math.round, lê normalmente
+                numero = (int) Math.round(scanner.nextDouble());
+
 
             } catch (InputMismatchException e) {
                 System.out.println("Por favor, digite um número válido.");
@@ -38,16 +37,16 @@ public class Adivinhar {
 
             // a cada tentativa eu uso o contador pra salvar os números
             if (contador == 1) {
-                n1 = convertido;
+                n1 = (int) numero;
             } else if (contador == 2) {
-                n2 = convertido;
+                n2 = (int) numero;
             } else {
-                n3 = convertido;
+                n3 = (int) numero;
             }
 
             if (numero == -1) {
                 break;
-            } else if (convertido == random) {
+            } else if (numero == random) {
                 System.out.println("Parabéns você acertou, o número é: " + random);
                 break;
             } else {
