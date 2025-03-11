@@ -37,6 +37,6 @@ public class Calculadora {
             System.out.println("Operador Inválido.");
         }
 
-        scanner.close()
+        scanner.close();
     }
 }
