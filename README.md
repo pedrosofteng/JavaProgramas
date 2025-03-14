@@ -1,1 +1,0 @@
-Esta é uma pasta oriunda dos meus  estudos, programas em perfeita execução, outros com defeitos e em tentativa constante de resolução, é um reflexo do meu aprendizado, esse conteúdo é livre usem como bem entender se for ajudar em algo!
