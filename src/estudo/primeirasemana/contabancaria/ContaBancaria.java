@@ -26,7 +26,16 @@ public class ContaBancaria {
     }
 
     public void setTitular(String titular) {
-        this.titular = titular;
+        while (true) {
+            try {
+                this.titular = titular;
+            } catch (InputMismatchException e) {
+                System.out.println("Use caracteres.");
+                scanner.nextLine();
+                continue;
+            }
+            break;
+        }
     }
 
     public void transfira (double valor) {
@@ -67,5 +76,6 @@ public class ContaBancaria {
         System.out.println("Titular: " + this.titular);
         System.out.println("Número: " + this.numeroDaConta);
         System.out.printf("Saldo: R$ %.2f", this.saldo);
+        System.out.println();
     }
 }
