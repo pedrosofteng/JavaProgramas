@@ -9,14 +9,14 @@ public class Main {
         musica1.avalia(8);
 
         System.out.print("Nome do artista: ");
-        musica1.artista = scanner.nextLine();
+        musica1.setArtista(scanner.nextLine());
 
         System.out.print("Título da música: ");
-        musica1.titulo = scanner.nextLine();
+        musica1.setTitulo(scanner.nextLine());
 
         System.out.print("Ano de lançamento: ");
-        musica1.setAnoDeLançamento(scanner.nextInt());
-        System.out.println(musica1.getAnoDeLançamento());
+        musica1.setAnoDeLancamento(scanner.nextInt());
+        System.out.println(musica1.getAnoDeLancamento());
 
         System.out.print("Dê uma nota a música: ");
         musica1.avalia(scanner.nextDouble());

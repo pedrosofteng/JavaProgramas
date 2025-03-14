@@ -1,29 +1,59 @@
 package estudo.primeirasemana.musica;
 
 public class Musica {
-    String titulo;
-    String artista;
-    private int anoDeLançamento;
-    double avaliacao;
-    double numAvaliacoes;
+    private String titulo;
+    private String artista;
+    private int anoDeLancamento;
+    private double avaliacao;
+    private double numAvaliacoes;
 
-    int getAnoDeLançamento () {
-        return anoDeLançamento;
+    public String getTitulo() {
+        return titulo;
     }
 
-    int setAnoDeLançamento (int ano) {
-        return anoDeLançamento = ano;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    void exibaFichaTecnica () {
+    public String getArtista() {
+        return artista;
+    }
+
+    public void setArtista(String artista) {
+        this.artista = artista;
+    }
+
+    public double getAvaliacao() {
+        return avaliacao;
+    }
+
+    public double getNumAvaliacoes() {
+        return numAvaliacoes;
+    }
+
+    public int getAnoDeLancamento () {
+        return anoDeLancamento;
+    }
+
+    public void setAnoDeLancamento (int ano) {
+        this.anoDeLancamento = ano;
+    }
+
+    // PODERIA FAZER ASSIM TAMBÉM
+
+    /* public int setAnoDeLancamento (int ano) {
+        return anoDeLancamento = ano
+    }*/
+
+    public void exibaFichaTecnica () {
         System.out.println("Nome do artista: " + this.artista);
         System.out.println("Nome da música: " + this.titulo);
-        System.out.println("Ano de lançamento: " + this.anoDeLançamento);
+        System.out.println("Ano de lançamento: " + this.anoDeLancamento);
         System.out.println("Avaliação: " + this.avaliacao);
         System.out.println("Número de avaliações: " + this.numAvaliacoes);
     }
 
-    void avalia (double nota) {
+    public void avalia (double nota) {
         if (nota >= 0) {
             avaliacao += nota;
             numAvaliacoes++;
@@ -32,7 +62,7 @@ public class Musica {
         }
     }
 
-    double mediaAvaliacoes () {
+    public double mediaAvaliacoes () {
             return avaliacao / numAvaliacoes;
     }
 }
