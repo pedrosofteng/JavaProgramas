@@ -2,7 +2,7 @@ package estudo.primeirasemana.simplesprogamas;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ContaBancária {
+public class ContaBancaria {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numero = 0;

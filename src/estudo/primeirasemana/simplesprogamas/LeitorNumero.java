@@ -1,7 +1,7 @@
 package estudo.primeirasemana.simplesprogamas;
 import java.util.Scanner;
 
-public class LeitorNúmero {
+public class LeitorNumero {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
