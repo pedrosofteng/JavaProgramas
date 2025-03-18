@@ -1,9 +1,9 @@
-package estudo.primeirasemana.contabancaria;
+package estudo.primeirasemana.br.com.bancopen.contas;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ContaBancaria {
+public class conta {
     Scanner scanner = new Scanner(System.in);
     private int numeroDaConta;
     private double saldo;
