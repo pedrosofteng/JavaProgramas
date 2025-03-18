@@ -1,4 +1,4 @@
-package estudo.segundasemana.carro;
+package estudo.segundasemana.projetocarro;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -10,8 +10,8 @@ public class Main {
         carro1.setNomeDoModelo("Mustang");
         int numero = 0;
         String mensagem = """
-                \n[1] Incluir preço a um estudo.segundasemana.carro.
-                [2] Ver ficha técnica de um estudo.segundasemana.carro.
+                \n[1] Incluir preço a um carro.
+                [2] Ver ficha técnica de um carro.
                 [3] Ver a média de preço de um ano.
                 [4] Ver o maior/menor preço em um ano.
                 [5] Sair.
@@ -25,7 +25,7 @@ public class Main {
 
                 switch (numero) {
                     case 1:
-                        System.out.println("Qual o preço do estudo.segundasemana.carro?");
+                        System.out.println("Qual o preço do carro?");
                         carro1.incluiPreco(scanner.nextDouble());
                         break;
                     case 2:

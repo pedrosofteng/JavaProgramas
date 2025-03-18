@@ -1,4 +1,4 @@
-package estudo.segundasemana.carro;
+package estudo.segundasemana.projetocarro;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -55,9 +55,10 @@ public class Carro {
                     this.ultimoPreco2023 = preco;
                     this.preco2023 += preco;
                     quantidadePreco2023++;
-                    if (menor2023 < preco) {
+                    if (menor2023 > preco) {
                         menor2023 = preco;
-                    } else {
+                    }
+                    if (maior2023 < preco) {
                         maior2023 = preco;
                     }
                     break;
@@ -65,9 +66,10 @@ public class Carro {
                     this.ultimoPreco2024 = preco;
                     this.preco2024 += preco;
                     quantidadePreco2024++;
-                    if (menor2024 < preco) {
+                    if (menor2024 > preco) {
                         menor2024 = preco;
-                    } else {
+                    }
+                    if (maior2024 < preco) {
                         maior2024 = preco;
                     }
                     break;
@@ -122,13 +124,13 @@ public class Carro {
             break;
         }
         if (ano == 2022 && preco2022 > 0) {
-            System.out.println("\nNome do estudo.segundasemana.carro: " + this.nomeDoModelo);
+            System.out.println("\nNome do carro: " + this.nomeDoModelo);
             System.out.printf("Último preço de 2022: R$ %.2f%n", ultimoPreco2022);
         } else if (ano == 2023 && preco2023 > 0) {
-            System.out.println("Nome do estudo.segundasemana.carro: " + this.nomeDoModelo);
+            System.out.println("Nome do carro: " + this.nomeDoModelo);
             System.out.printf("Último preço de 2023: R$ %.2f%n", ultimoPreco2023);
         } else if (ano == 2024 && preco2024 > 0) {
-            System.out.println("Nome do estudo.segundasemana.carro: " + this.nomeDoModelo);
+            System.out.println("Nome do carro: " + this.nomeDoModelo);
             System.out.printf("Último preço de 2024: R$ %.2f%n", ultimoPreco2024);
         } else {
             System.out.println("\nPreço não informado, informe um preço para esse ano. \n");
