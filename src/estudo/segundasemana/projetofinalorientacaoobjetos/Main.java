@@ -28,5 +28,7 @@ public class Main {
         }
         numeroUm.setParticipantes("Igor, Renato Cariani e Júlio Balestrin.");
         numeroUm.descricao();
+
+        System.out.print(flowpodcast);
     }
 }
