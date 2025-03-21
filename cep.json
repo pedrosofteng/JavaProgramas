@@ -1,0 +1,18 @@
+[
+  {
+    "cep": "32604-190",
+    "logradouro": "Rua Promotor Júlio Vasconcelos",
+    "bairro": "Angola",
+    "localidade": "Betim",
+    "uf": "MG",
+    "estado": "Minas Gerais"
+  },
+  {
+    "cep": "79072-410",
+    "logradouro": "Rua Iraides Paulino da Silva",
+    "bairro": "Jardim Paulo Coelho Machado",
+    "localidade": "Campo Grande",
+    "uf": "MS",
+    "estado": "Mato Grosso do Sul"
+  }
+]
